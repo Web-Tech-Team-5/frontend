@@ -12,18 +12,15 @@ import ContactForDealPage from "./ContactForDealPage";
 import ForgetPassword from "./ForgetPassword";
 import VerifyOtp from "./VerifyOtp";
 import UpdatePassword from "./UpdatePassword";
-import CarDetailsPage from "./CarDetailsPage"; // Fixed import path
+import CarDetailsPage from "./CarDetailsPage";
 import Payment from "./Payment";
-import { loadStripe } from '@stripe/stripe-js'; // Import loadStripe function
-import { Elements } from '@stripe/react-stripe-js';
-
-const stripePromise = loadStripe('your-publishable-key-here'); // Use your own Stripe publishable key
+import { ToastContainer } from "react-toastify"; // Import the ToastContainer
+import "react-toastify/dist/ReactToastify.css"; // Import Toastify styles
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Router>
-      <Elements stripe={stripePromise}>
-      <Routes>
+        <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
             <Route path="rental" element={<Rental />} />
@@ -31,13 +28,14 @@ createRoot(document.getElementById("root")).render(
             <Route path="signup" element={<Signup />} />
             <Route path="feedback" element={<Feedback />} />
             <Route path="forget-password" element={<ForgetPassword />} />
-            <Route path="verify-otp" element={<VerifyOtp />} />
+            <Route path="verify-otp-page" element={<VerifyOtp />} />
             <Route path="update-password" element={<UpdatePassword />} />
             <Route path="car/:carId" element={<CarDetailsPage />} /> {/* Dynamic route */}
-            <Route path="/contact-for-deal/:carId" element={<ContactForDealPage />} /> 
-            <Route path="payment" element={<Payment />} /></Route>
+            <Route path="/contact-for-deal/:carId" element={<ContactForDealPage />} />
+            <Route path="payment" element={<Payment />} />
+          </Route>
         </Routes>
-      </Elements>
+      <ToastContainer /> {/* ToastContainer to display toasts */}
     </Router>
   </StrictMode>
 );
