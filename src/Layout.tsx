@@ -97,6 +97,9 @@ const Layout = () => {
             <Link to="/rental" className="px-4 text-gray-700 hover:text-black hover:underline">
               Rentals
             </Link>
+            <Link to="/AdminQueryPage" className="px-4 text-gray-700 hover:text-black hover:underline">
+              AdminQueryPage
+            </Link>
 
             {/* Conditionally render Login and Signup based on isLoggedIn */}
             {!isLoggedIn && (

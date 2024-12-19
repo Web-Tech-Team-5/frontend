@@ -14,6 +14,7 @@ import VerifyOtp from "./VerifyOtp";
 import UpdatePassword from "./UpdatePassword";
 import CarDetailsPage from "./CarDetailsPage";
 import Payment from "./Payment";
+import AdminDashboard from "./AdminQueryPage";
 import { ToastContainer } from "react-toastify"; // Import the ToastContainer
 import "react-toastify/dist/ReactToastify.css"; // Import Toastify styles
 
@@ -33,6 +34,7 @@ createRoot(document.getElementById("root")).render(
             <Route path="car/:carId" element={<CarDetailsPage />} /> {/* Dynamic route */}
             <Route path="/contact-for-deal/:carId" element={<ContactForDealPage />} />
             <Route path="payment" element={<Payment />} />
+            <Route path="AdminQueryPage" element={<AdminDashboard />} />
           </Route>
         </Routes>
       <ToastContainer /> {/* ToastContainer to display toasts */}
