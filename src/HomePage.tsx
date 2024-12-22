@@ -203,7 +203,7 @@ const HomePage = () => {
       <div className="max-w-7xl mx-auto py-8 px-4">
         <div className="bg-gray-50 shadow-lg rounded-xl flex flex-col md:flex-row items-center">
           <img
-            src="https://via.placeholder.com/400x250"
+            src="https://tse2.mm.bing.net/th?id=OIP.N0OSnmKDBm-1SFbWfl2bFwHaE7&pid=Api&P=0&h=180"
             alt="Mahindra Thar"
             className="w-full md:w-1/2 rounded-t-xl md:rounded-t-none md:rounded-l-xl"
           />
