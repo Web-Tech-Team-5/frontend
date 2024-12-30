@@ -17,6 +17,7 @@ import Payment from "./Payment";
 import AdminDashboard from "./AdminQueryPage";
 import { ToastContainer } from "react-toastify"; // Import the ToastContainer
 import "react-toastify/dist/ReactToastify.css"; // Import Toastify styles
+import UploadCar from "./UploadCar";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -34,6 +35,7 @@ createRoot(document.getElementById("root")).render(
             <Route path="car/:carId" element={<CarDetailsPage />} /> {/* Dynamic route */}
             <Route path="/contact-for-deal/:carId" element={<ContactForDealPage />} />
             <Route path="payment" element={<Payment />} />
+            <Route path="uploadCar" element={<UploadCar />} />
             <Route path="AdminQueryPage" element={<AdminDashboard />} />
           </Route>
         </Routes>

@@ -833,8 +833,9 @@ const Rental = () => {
                 key={car._id}
                 className="relative bg-white shadow-xl rounded-lg overflow-hidden transition-all transform hover:scale-105 hover:shadow-2xl"
               >
+                {/* Display the car image from the API endpoint */}
                 <img
-                  src="https://via.placeholder.com/400x250" // Placeholder for image
+                  src={`http://localhost:8080/api/image/${car.imageId}`} // Assuming car.imageId is the correct field
                   alt={car.make + " " + car.model}
                   className="w-full h-48 object-cover"
                 />
