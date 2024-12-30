@@ -64,6 +64,7 @@
 
 import React, { useEffect, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
+import UploadCar from "./UploadCar";
 
 // Helper function to get the token from localStorage
 const getTokenFromLocalStorage = () => {
@@ -117,6 +118,11 @@ const Layout = () => {
             {isLoggedIn && (
               <Link to="/profile" className="px-4 text-gray-700 hover:text-black hover:underline">
                 Profile
+              </Link>
+            )}
+            {isLoggedIn && (
+              <Link to="/uploadCar" className="px-4 text-gray-700 hover:text-black hover:underline" >
+                Add Car
               </Link>
             )}
 
